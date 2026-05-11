@@ -90,7 +90,6 @@ nav ul li a:hover{
 
   background-size:cover;
 
-  /* LOWER IMAGE POSITION */
   background-position:center 35%;
 
   background-repeat:no-repeat;
@@ -167,7 +166,7 @@ nav ul li a:hover{
 
   text-align:center;
 
-  padding:100px 20px 50px;
+  padding:120px 20px 60px;
 }
 
 .section-title h2{
@@ -188,27 +187,42 @@ nav ul li a:hover{
 
 .gallery{
 
-  width:90%;
+  width:92%;
   margin:auto;
 
-  columns:3 280px;
-  column-gap:20px;
+  display:grid;
 
-  padding-bottom:100px;
+  grid-template-columns:
+  repeat(auto-fit, minmax(280px, 1fr));
+
+  gap:30px;
+
+  padding-bottom:120px;
 }
+
+/* FRAME STYLE */
 
 .card{
 
-  break-inside:avoid;
-
-  margin-bottom:20px;
+  position:relative;
 
   overflow:hidden;
 
-  border:5px solid #171717;
   background:#111;
 
-  position:relative;
+  padding:12px;
+
+  border:3px solid #2b2b2b;
+
+  box-shadow:
+  0 0 0 4px #000,
+  0 12px 30px rgba(0,0,0,0.7);
+
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
 }
 
 .card img{
@@ -216,12 +230,14 @@ nav ul li a:hover{
   width:100%;
   display:block;
 
+  background:white;
+
   transition:0.5s;
 }
 
 .card:hover img{
-  transform:scale(1.05);
-  opacity:0.65;
+  transform:scale(1.03);
+  opacity:0.82;
 }
 
 .overlay{
@@ -236,6 +252,7 @@ nav ul li a:hover{
   background:rgba(0,0,0,0.45);
 
   opacity:0;
+
   transition:0.4s;
 }
 
@@ -265,7 +282,7 @@ nav ul li a:hover{
 
   align-items:center;
 
-  padding-bottom:100px;
+  padding-bottom:120px;
 }
 
 .about-image img{
@@ -273,6 +290,9 @@ nav ul li a:hover{
   width:100%;
 
   border:5px solid #171717;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.6);
 }
 
 .about-text h2{
@@ -291,6 +311,7 @@ nav ul li a:hover{
   line-height:2;
   margin-bottom:20px;
 }
+
 /* =========================
     CONTACT
 ========================= */
@@ -375,6 +396,10 @@ footer p{
 
   .about-text h2{
     font-size:40px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
   }
 
 }
