@@ -185,26 +185,20 @@ nav ul li a:hover{
     GALLERY
 ========================= */
 
-/* =========================
-    GALLERY
-========================= */
-
 .gallery{
 
-  width:92%;
+  width:90%;
   margin:auto;
 
-  display:grid;
-
-  grid-template-columns:
-  repeat(3, 1fr);
-
-  gap:35px;
+  columns:3 300px;
+  column-gap:25px;
 
   padding-bottom:120px;
 }
 
 .card{
+
+  break-inside:avoid;
 
   position:relative;
 
@@ -221,6 +215,8 @@ nav ul li a:hover{
   0 12px 30px rgba(0,0,0,0.7);
 
   transition:0.4s;
+
+  margin-bottom:25px;
 }
 
 .card:hover{
@@ -241,33 +237,6 @@ nav ul li a:hover{
   transform:scale(1.03);
   opacity:0.82;
 }
-
-.overlay{
-
-  position:absolute;
-  inset:0;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:rgba(0,0,0,0.45);
-
-  opacity:0;
-
-  transition:0.4s;
-}
-
-.overlay h3{
-  font-size:24px;
-  font-weight:300;
-  letter-spacing:2px;
-}
-
-.card:hover .overlay{
-  opacity:1;
-}
-
 /* =========================
     ABOUT
 ========================= */
