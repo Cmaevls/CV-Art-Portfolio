@@ -248,9 +248,9 @@ nav ul li a:hover{
   align-items:center;
   justify-content:center;
 
-  width:100%;
+  width:105%;
 
-  transform:translateY(-35px);
+  transform:translateY(-30px);
 }
 .overlay{
 
