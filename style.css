@@ -242,6 +242,42 @@ nav ul li a:hover{
   transform:scale(1.03);
   opacity:0.82;
 }
+.overlay{
+
+  position:absolute;
+
+  top:12px;
+  left:12px;
+  right:12px;
+  bottom:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(0,0,0,0.45);
+
+  opacity:0;
+
+  transition:0.4s;
+}
+
+.overlay h3{
+
+  color:white;
+
+  font-size:28px;
+
+  font-weight:500;
+
+  letter-spacing:2px;
+
+  text-align:center;
+}
+
+.card:hover .overlay{
+  opacity:1;
+}
 /* =========================
     ABOUT
 ========================= */
