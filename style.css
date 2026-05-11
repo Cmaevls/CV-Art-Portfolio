@@ -217,8 +217,11 @@ nav ul li a:hover{
   transition:0.4s;
 
   margin-bottom:25px;
-}
 
+  display:inline-block;
+
+  width:100%;
+}
 .card:hover{
   transform:translateY(-8px);
 }
@@ -226,6 +229,8 @@ nav ul li a:hover{
 .card img{
 
   width:100%;
+  height:auto;
+
   display:block;
 
   background:white;
