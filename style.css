@@ -185,6 +185,10 @@ nav ul li a:hover{
     GALLERY
 ========================= */
 
+/* =========================
+    GALLERY
+========================= */
+
 .gallery{
 
   width:92%;
@@ -193,14 +197,12 @@ nav ul li a:hover{
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fit, minmax(280px, 1fr));
+  repeat(3, 1fr);
 
-  gap:30px;
+  gap:35px;
 
   padding-bottom:120px;
 }
-
-/* FRAME STYLE */
 
 .card{
 
