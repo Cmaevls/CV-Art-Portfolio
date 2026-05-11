@@ -186,67 +186,87 @@ nav ul li a:hover{
     GALLERY
 ========================= */
 
+/* =========================
+    ART WALL GALLERY
+========================= */
+
 .gallery{
 
-  width:90%;
+  width:92%;
   margin:auto;
 
-  columns:3 280px;
-  column-gap:20px;
+  display:flex;
+  gap:25px;
 
-  padding-bottom:100px;
+  justify-content:center;
+
+  padding-bottom:120px;
 }
 
-.card{
+.gallery-column{
 
-  break-inside:avoid;
+  display:flex;
+  flex-direction:column;
 
-  margin-bottom:20px;
+  gap:25px;
 
-  overflow:hidden;
+  flex:1;
+}
 
-  border:5px solid #171717;
+.frame{
+
   background:#111;
 
-  position:relative;
+  padding:10px;
+
+  border:3px solid #2a2a2a;
+
+  box-shadow:
+  0 0 10px rgba(0,0,0,0.5),
+  0 10px 30px rgba(0,0,0,0.8);
+
+  transition:0.4s;
+
+  overflow:hidden;
 }
 
-.card img{
+.frame:hover{
+
+  transform:translateY(-8px) scale(1.02);
+
+  border-color:#00d1ff;
+}
+
+.frame img{
 
   width:100%;
   display:block;
 
-  transition:0.5s;
+  object-fit:cover;
 }
 
-.card:hover img{
-  transform:scale(1.05);
-  opacity:0.65;
+/* DIFFERENT FRAME SIZES */
+
+.portrait img{
+  height:500px;
 }
 
-.overlay{
-
-  position:absolute;
-  inset:0;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:rgba(0,0,0,0.45);
-
-  opacity:0;
-  transition:0.4s;
+.tall img{
+  height:650px;
 }
 
-.overlay h3{
-  font-size:24px;
-  font-weight:300;
-  letter-spacing:2px;
+.frame:not(.portrait):not(.tall) img{
+  height:320px;
 }
 
-.card:hover .overlay{
-  opacity:1;
+/* MOBILE */
+
+@media(max-width:950px){
+
+  .gallery{
+    flex-direction:column;
+  }
+
 }
 
 /* =========================
