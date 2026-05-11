@@ -1,3 +1,4 @@
+
 /* style.css */
 
 *{
@@ -222,6 +223,7 @@ nav ul li a:hover{
 
   width:100%;
 }
+
 .card:hover{
   transform:translateY(-8px);
 }
@@ -236,22 +238,20 @@ nav ul li a:hover{
   background:white;
 
   transition:0.5s;
+
+  object-fit:cover;
 }
 
-.overlay-content{
+/* REMOVE IMAGE BLUR */
 
-  text-align:center;
-
-  display:flex;
-  flex-direction:column;
-
-  align-items:center;
-  justify-content:center;
-
-  width:100%;
-
-  transform:translateY(-30px);
+.card:hover img{
+  transform:none;
 }
+
+/* =========================
+    OVERLAY
+========================= */
+
 .overlay{
 
   position:absolute;
@@ -277,6 +277,23 @@ nav ul li a:hover{
   z-index:5;
 }
 
+.card:hover .overlay{
+  opacity:1;
+}
+
+.overlay-content{
+
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  width:100%;
+}
+
 .overlay h3{
 
   color:white;
@@ -289,12 +306,13 @@ nav ul li a:hover{
 
   text-transform:uppercase;
 
-  margin-bottom:16px;
+  margin-bottom:18px;
 
   line-height:1.1;
 
   text-align:center;
 }
+
 .overlay p{
 
   color:white;
@@ -308,9 +326,6 @@ nav ul li a:hover{
   text-align:center;
 }
 
-.card:hover .overlay{
-  opacity:1;
-}
 /* =========================
     ABOUT
 ========================= */
@@ -444,7 +459,8 @@ footer p{
   }
 
   .gallery{
-    grid-template-columns:1fr;
+    columns:1 300px;
   }
 
 }
+
