@@ -242,24 +242,21 @@ nav ul li a:hover{
   transform:scale(1.03);
   opacity:0.82;
 }
-.overlay{
+.overlay-content{
+  text-align:center;
+}
 
-  position:absolute;
+.overlay p{
 
-  top:12px;
-  left:12px;
-  right:12px;
-  bottom:12px;
+  margin-top:12px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  color:#e0e0e0;
 
-  background:rgba(0,0,0,0.45);
+  font-size:14px;
 
-  opacity:0;
+  line-height:1.7;
 
-  transition:0.4s;
+  max-width:300px;
 }
 
 .overlay h3{
