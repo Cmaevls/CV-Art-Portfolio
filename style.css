@@ -186,87 +186,67 @@ nav ul li a:hover{
     GALLERY
 ========================= */
 
-/* =========================
-    ART WALL GALLERY
-========================= */
-
 .gallery{
 
-  width:92%;
+  width:90%;
   margin:auto;
 
-  display:flex;
-  gap:25px;
+  columns:3 280px;
+  column-gap:20px;
 
-  justify-content:center;
-
-  padding-bottom:120px;
+  padding-bottom:100px;
 }
 
-.gallery-column{
+.card{
 
-  display:flex;
-  flex-direction:column;
+  break-inside:avoid;
 
-  gap:25px;
-
-  flex:1;
-}
-
-.frame{
-
-  background:#111;
-
-  padding:10px;
-
-  border:3px solid #2a2a2a;
-
-  box-shadow:
-  0 0 10px rgba(0,0,0,0.5),
-  0 10px 30px rgba(0,0,0,0.8);
-
-  transition:0.4s;
+  margin-bottom:20px;
 
   overflow:hidden;
+
+  border:5px solid #171717;
+  background:#111;
+
+  position:relative;
 }
 
-.frame:hover{
-
-  transform:translateY(-8px) scale(1.02);
-
-  border-color:#00d1ff;
-}
-
-.frame img{
+.card img{
 
   width:100%;
   display:block;
 
-  object-fit:cover;
+  transition:0.5s;
 }
 
-/* DIFFERENT FRAME SIZES */
-
-.portrait img{
-  height:500px;
+.card:hover img{
+  transform:scale(1.05);
+  opacity:0.65;
 }
 
-.tall img{
-  height:650px;
+.overlay{
+
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(0,0,0,0.45);
+
+  opacity:0;
+  transition:0.4s;
 }
 
-.frame:not(.portrait):not(.tall) img{
-  height:320px;
+.overlay h3{
+  font-size:24px;
+  font-weight:300;
+  letter-spacing:2px;
 }
 
-/* MOBILE */
-
-@media(max-width:950px){
-
-  .gallery{
-    flex-direction:column;
-  }
-
+.card:hover .overlay{
+  opacity:1;
 }
 
 /* =========================
