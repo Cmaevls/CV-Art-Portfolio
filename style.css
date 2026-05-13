@@ -1,7 +1,3 @@
-/* =========================
-    GLOBAL
-========================= */
-
 *{
   margin:0;
   padding:0;
@@ -9,44 +5,36 @@
   font-family:'Poppins', sans-serif;
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
   background:#050505;
+  overflow:hidden;
   color:white;
-  overflow-x:hidden;
 }
 
-/* =========================
-    NAVBAR
-========================= */
+/* NAVBAR */
 
 nav{
 
   width:100%;
-  position:fixed;
 
+  position:fixed;
   top:0;
   left:0;
 
   z-index:1000;
 
+  padding:30px 70px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
-
-  padding:22px 70px;
-
-  background:rgba(0,0,0,0.45);
-
-  backdrop-filter:blur(8px);
 }
 
 .logo{
-  font-size:30px;
+
+  font-size:32px;
   font-weight:700;
+
   letter-spacing:2px;
 }
 
@@ -55,9 +43,11 @@ nav{
 }
 
 nav ul{
+
   display:flex;
+  gap:40px;
+
   list-style:none;
-  gap:35px;
 }
 
 nav ul li a{
@@ -67,8 +57,6 @@ nav ul li a{
 
   font-size:14px;
 
-  letter-spacing:1px;
-
   transition:0.3s;
 }
 
@@ -76,162 +64,59 @@ nav ul li a:hover{
   color:#00d1ff;
 }
 
-/* =========================
-    HERO
-========================= */
+/* SLIDER */
 
-.hero{
-
-  height:100vh;
-
-  background:
-  linear-gradient(
-    to right,
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.35)
-  ),
-
-  url('https://lh3.googleusercontent.com/d/12u7-eCgM7udH4MOXUAtaVEdvPajVLCqM');
-
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-
-  display:flex;
-  align-items:center;
-
-  padding:0 90px;
-}
-
-.hero-content{
-  max-width:650px;
-}
-
-.hero small{
-  color:#d4d4d4;
-  letter-spacing:5px;
-  font-size:13px;
-}
-
-.hero h1{
-
-  font-size:88px;
-  font-weight:300;
-
-  line-height:1;
-
-  margin-top:15px;
-}
-
-.hero h1 span{
-  color:#00d1ff;
-  font-weight:700;
-}
-
-.hero p{
-
-  margin-top:28px;
-
-  color:#d0d0d0;
-
-  line-height:1.9;
-
-  max-width:520px;
-}
-
-/* BUTTON */
-
-.hero-btn{
-
-  display:inline-block;
-
-  margin-top:35px;
-
-  padding:15px 38px;
-
-  border-radius:50px;
-
-  background:#00d1ff;
-  color:black;
-
-  text-decoration:none;
-
-  font-size:15px;
-  font-weight:600;
-
-  transition:0.3s;
-}
-
-.hero-btn:hover{
-  background:white;
-  transform:translateY(-4px);
-}
-
-/* =========================
-    SECTION TITLE
-========================= */
-
-.section-title{
-
-  text-align:center;
-
-  padding:120px 20px 60px;
-}
-
-.section-title h2{
-
-  font-size:58px;
-  font-weight:300;
-
-  letter-spacing:3px;
-}
-
-.section-title p{
-
-  margin-top:15px;
-
-  color:#8f8f8f;
-}
-
-/* =========================
-    CAROUSEL
-========================= */
-
-.carousel-section{
+.slider-section{
 
   width:100%;
-  min-height:100vh;
+  height:100vh;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+.slider{
+
+  width:100%;
+  height:100%;
+
+  position:relative;
+}
+
+/* SLIDE */
+
+.slide{
+
+  width:100%;
+  height:100vh;
+
+  position:absolute;
+
+  top:0;
+  left:100%;
 
   display:flex;
   justify-content:center;
   align-items:center;
 
-  padding:80px 0;
+  gap:90px;
+
+  padding:0 8%;
+
+  transition:1s ease;
 }
 
-.carousel{
-
-  width:90%;
-  max-width:1400px;
-
-  position:relative;
-}
-
-/* HIDE ALL */
-
-.slide{
-  display:none;
-
-  align-items:center;
-  justify-content:space-between;
-
-  gap:80px;
-}
-
-/* SHOW ACTIVE */
+/* ACTIVE */
 
 .slide.active{
-  display:flex;
+  left:0;
+}
+
+/* PREVIOUS */
+
+.slide.prev{
+  left:-100%;
 }
 
 /* IMAGE */
@@ -245,17 +130,15 @@ nav ul li a:hover{
   width:100%;
   max-width:700px;
 
-  display:block;
-
   box-shadow:
-  0 20px 50px rgba(0,0,0,0.7);
+  0 25px 60px rgba(0,0,0,0.7);
 
   border:6px solid #111;
 }
 
-/* CONTENT */
+/* TEXT */
 
-.slide-content{
+.slide-text{
 
   flex:1;
 
@@ -266,54 +149,52 @@ nav ul li a:hover{
 
   position:absolute;
 
-  top:-90px;
-  left:0;
+  top:-120px;
+  left:-10px;
 
-  font-size:180px;
+  font-size:230px;
 
-  font-weight:700;
+  font-weight:800;
 
-  color:rgba(255,255,255,0.05);
+  color:rgba(255,255,255,0.04);
 
   z-index:-1;
 }
 
-.slide-content h2{
+.slide-text h1{
 
-  font-size:72px;
+  font-size:82px;
 
   line-height:1;
 
-  margin-bottom:25px;
-
-  font-weight:700;
+  margin-bottom:30px;
 }
 
-.slide-content p{
+.slide-text p{
 
-  color:#cfcfcf;
+  color:#d0d0d0;
+
+  font-size:17px;
 
   line-height:2;
 
   max-width:520px;
 
-  margin-bottom:35px;
-
-  font-size:16px;
+  margin-bottom:40px;
 }
 
 /* BUTTON */
 
-.view-btn{
+.next-btn{
 
-  padding:14px 34px;
+  padding:16px 40px;
 
   border:none;
 
+  border-radius:50px;
+
   background:#00d1ff;
   color:black;
-
-  border-radius:50px;
 
   font-weight:600;
   font-size:15px;
@@ -323,156 +204,37 @@ nav ul li a:hover{
   transition:0.3s;
 }
 
-.view-btn:hover{
+.next-btn:hover{
 
   background:white;
 
-  transform:translateY(-4px);
+  transform:translateY(-5px);
 }
 
-/* =========================
-    ABOUT
-========================= */
+/* RESPONSIVE */
 
-.about{
-
-  width:90%;
-  margin:auto;
-
-  display:grid;
-  grid-template-columns:1fr 1fr;
-
-  gap:70px;
-
-  align-items:center;
-
-  padding:120px 0;
-}
-
-.about-image img{
-
-  width:100%;
-
-  border:5px solid #171717;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,0.6);
-}
-
-.about-text h2{
-
-  font-size:52px;
-  font-weight:300;
-
-  margin-bottom:25px;
-}
-
-.about-text span{
-  color:#00d1ff;
-  font-weight:700;
-}
-
-.about-text p{
-
-  color:#c9c9c9;
-
-  line-height:2;
-
-  margin-bottom:20px;
-}
-
-/* =========================
-    CONTACT
-========================= */
-
-.contact{
-
-  text-align:center;
-
-  padding:120px 20px;
-
-  background:#0d0d0d;
-}
-
-.contact h2{
-
-  font-size:50px;
-
-  margin-bottom:25px;
-
-  font-weight:300;
-}
-
-.contact p{
-
-  color:#cfcfcf;
-
-  margin-bottom:10px;
-}
-
-/* =========================
-    FOOTER
-========================= */
-
-footer{
-
-  text-align:center;
-
-  padding:45px 20px;
-
-  border-top:1px solid #151515;
-
-  background:black;
-}
-
-footer p{
-  color:#7f7f7f;
-  letter-spacing:1px;
-}
-
-/* =========================
-    RESPONSIVE
-========================= */
-
-@media(max-width:1000px){
-
-  nav{
-    padding:20px 30px;
-  }
-
-  nav ul{
-    display:none;
-  }
-
-  .hero{
-    padding:0 35px;
-  }
-
-  .hero h1{
-    font-size:58px;
-  }
+@media(max-width:1100px){
 
   .slide{
+
     flex-direction:column;
+
     text-align:center;
+
+    gap:40px;
   }
 
-  .slide-content h2{
-    font-size:48px;
+  .slide-text h1{
+    font-size:52px;
   }
 
   .slide-number{
     font-size:120px;
-    top:-60px;
+    top:-70px;
   }
 
-  .slide-content p{
-    margin:auto;
-    margin-bottom:35px;
-  }
-
-  .about{
-    grid-template-columns:1fr;
+  nav ul{
+    display:none;
   }
 
 }
