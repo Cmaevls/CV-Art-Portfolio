@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,125 +10,254 @@
 
   <title>CV STUDIO</title>
 
+  <!-- CSS FILE -->
   <link rel="stylesheet" href="style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- FAVICON -->
+  <link rel="shortcut icon" type="image/png" href="./logo.png?v=2">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+  <!-- =========================
+        NAVBAR
+  ========================== -->
 
-<nav>
+  <nav>
 
-  <div class="logo">
-    ART <span>PORTFOLIO</span>
+    <div class="logo">
+      ART <span>PORTFOLIO</span>
+    </div>
+
+    <ul>
+
+      <li>
+        <a href="#home">HOME</a>
+      </li>
+
+      <li>
+        <a href="#portfolio">PORTFOLIO</a>
+      </li>
+
+      <li>
+        <a href="#about">ABOUT</a>
+      </li>
+
+      <li>
+        <a href="#contact">CONTACT</a>
+      </li>
+
+    </ul>
+
+  </nav>  
+
+  <!-- =========================
+        HERO SECTION
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <small>ARTIST • PAINTER • DESIGNER</small>
+
+      <h1>
+        CV <span>STUDIO</span>
+      </h1>
+
+      <p>
+        Welcome to my creative world of visual stories
+        crafted through passion, creativity,
+        imagination, emotions, and dreams.
+      </p>
+
+      <!-- CLICKABLE BUTTON -->
+
+      <a href="#portfolio" class="hero-btn">
+        VIEW PORTFOLIO
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+        PORTFOLIO TITLE
+  ========================== -->
+
+  <section class="section-title" id="portfolio">
+
+    <h2>PORTFOLIO</h2>
+
+    <p>
+      A collection of my paintings and artworks
+    </p>
+
+  </section>
+
+  <!-- =========================
+        GALLERY
+  ========================== -->
+
+<section class="gallery">
+
+  <!-- ART 1 -->
+
+  <div class="card">
+    <img src="./Harry Potter.png" alt="">
+    <div class="overlay">
+      <div class="overlay-content">
+      <h3>Hogwarts Castle</h3>
+            <p>
+       A painting of Hogwarts Castle illuminated beneath the moonlight, 
+      capturing the magical atmosphere and beauty of the wizarding world.
+      </p>
+      </div>
+    </div>
+</div>
+
+  <!-- ART 2 -->
+
+  <div class="card">
+    <img src="./Eternal Blossom.png" alt="">
+    <div class="overlay">
+      <div class="overlay-content">
+      <h3>Eternal Blossom</h3>
+                  <p>
+       A painting of blooming flowers delicately arranged against a muted backdrop,
+      capturing the timeless beauty, grace, and serenity of nature in everlasting bloom.
+      </p>
+    </div>
+  </div>
+</div>
+  <!-- ART 3 -->
+
+  <div class="card">
+    <img src="./Euthymia.png" alt="">
+    <div class="overlay">
+      <div class="overlay-content">
+      <h3>Euthymia</h3>
+              <p>
+  A painted recreation of a digital artwork by Mikko Eerola,
+                portraying a whimsical cliffside house beneath vivid dreamlike skies,
+                capturing the calmness, warmth, and emotional balance reflected in Euthymia.
+      </p>
+    </div>
+    </div>
   </div>
 
-  <ul>
+  <!-- ART 4 -->
 
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">PORTFOLIO</a></li>
-    <li><a href="#">ABOUT</a></li>
-    <li><a href="#">CONTACT</a></li>
-
-  </ul>
-
-</nav>
-
-<!-- SLIDER -->
-
-<section class="slider-section">
-
-  <div class="slider">
-
-    <!-- SLIDE 1 -->
-
-    <div class="slide active">
-
-      <div class="slide-image">
-        <img src="./Harry Potter.png">
-      </div>
-
-      <div class="slide-text">
-
-        <span class="slide-number">01</span>
-
-        <h1>Hogwarts Castle</h1>
-
-        <p>
-          A painting of Hogwarts Castle illuminated beneath the moonlight,
-          capturing the magical atmosphere and beauty of the wizarding world.
-        </p>
-
-        <button class="next-btn">
-          View Case
-        </button>
-
-      </div>
-
+  <div class="card">
+    <img src="./Eiffel Tower.png" alt="">
+    <div class="overlay">
+      <div class="overlay-content">
+      <h3>Eiffel Tower</h3>
+              <p>
+     A painting of the Eiffel Tower from a low-angle perspective,
+                capturing the elegance, intricate structure, and timeless beauty of Parisian architecture.
+      </p>
     </div>
-
-    <!-- SLIDE 2 -->
-
-    <div class="slide">
-
-      <div class="slide-image">
-        <img src="./Eternal Blossom.png">
-      </div>
-
-      <div class="slide-text">
-
-        <span class="slide-number">02</span>
-
-        <h1>Eternal Blossom</h1>
-
-        <p>
-          A painting of blooming flowers delicately arranged against
-          a muted backdrop, capturing timeless beauty and serenity.
-        </p>
-
-        <button class="next-btn">
-          View Case
-        </button>
-
-      </div>
-
     </div>
-
-    <!-- SLIDE 3 -->
-
-    <div class="slide">
-
-      <div class="slide-image">
-        <img src="./Euthymia.png">
-      </div>
-
-      <div class="slide-text">
-
-        <span class="slide-number">03</span>
-
-        <h1>Euthymia</h1>
-
-        <p>
-          A dreamlike cliffside house beneath vivid skies,
-          inspired by emotional balance and surreal imagination.
-        </p>
-
-        <button class="next-btn">
-          View Case
-        </button>
-
-      </div>
-
-    </div>
-
   </div>
+
+  <!-- ART 5 -->
+
+  <div class="card">
+    <img src="./Wanderer.png" alt="">
+    <div class="overlay">
+      <div class="overlay-content">
+      <h3>Wanderer</h3>
+              <p>
+     A painting of the Eiffel Tower from a low-angle perspective,
+                capturing the elegance, intricate structure, and timeless beauty of Parisian architecture.
+      </p>
+    </div>
+    </div>
+  </div>
+
+  <!-- ART 6 -->
+
+  <div class="card">
+    <img src="./Sanctum Above.png" alt="">
+    <div class="overlay">
+      <div class="overlay-content">
+      <h3>Sanctum Above</h3>
+               <p>
+     A painting of the Eiffel Tower from a low-angle perspective,
+                capturing the elegance, intricate structure, and timeless beauty of Parisian architecture.
+      </p>
+    </div>
+    </div>
+  </div>
+
+
+</section>
+  <div style="clear: both;"></div>
+
+  <!-- =========================
+        ABOUT
+  ========================== -->
+
+  <section class="about" id="about">
+
+    <div class="about-image">
+
+      <!-- YOUR GDRIVE IMAGE -->
+
+     <img src="https://lh3.googleusercontent.com/d/1ky_ulrQPMnlEbNp6of3bUyFrjw3YwHhq">
+      
+    </div>
+
+    <div class="about-text">
+
+      <h2>
+        About <span>Me</span>
+      </h2>
+
+      <p>
+        I am a passionate artist who creates dreamlike visual worlds
+        through traditional and digital art.
+      </p>
+
+      <p>
+        My works are inspired by fantasy architecture,
+        nature, emotional storytelling,
+        and surreal imagination.
+      </p>
+
+    </div>
+
+  </section>
+  <!-- =========================
+      CONTACT
+========================== -->
+
+<section class="contact" id="contact">
+
+  <h2>Contact Me</h2>
+
+  <p>Email: christineaviles1010@gmail.com</p>
+
+  <p>Instagram: @yourusername</p>
 
 </section>
 
-<script src="script.js"></script>
+  <!-- =========================
+        FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <p>
+      © 2026 CV ART Portfolio • All Rights Reserved
+    </p>
+
+  </footer>
 
 </body>
+
 </html>
